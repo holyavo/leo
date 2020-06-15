@@ -1,0 +1,178 @@
+.contact{
+    font-family: 'SegoeWPN';
+    padding: 24px 0 35px;
+}
+
+.contact__container{
+    
+    width: 100%;
+    max-width: 1022px;
+    
+    margin: 0 auto;
+}
+.contact__row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.login-form{
+    background-color: #e67624;
+    
+    border-radius: 10px;
+    
+    margin: 0 10px;
+    
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        
+        align-items: center;
+    }
+}
+
+.login-form__body{
+    padding: 10px 23px 20px 26px;
+}
+
+.login-form__subtitle{
+    
+    font-size: 28px;
+    color: #fff;
+    
+    margin: 0 0 20px 0;
+}
+
+.text{
+    font-size: 16px;
+    color: #4f4f4f;
+    
+    width: 150px;
+    height: 26px;
+    background-color: #e8e8e8;
+    
+    padding: 2px 0 3px 10px;
+    
+    &:nth-child(2){
+        margin: 0 12px;
+    }
+    
+}
+
+.submit-btn{
+    width: 94px;
+    height: 30px;
+    background-color: #444444;
+    
+    font-weight: 300;
+    color: #ffffff;
+    
+    padding: 0 0 2px;
+    
+    cursor: pointer;
+    
+    transition: background-color .2s linear;
+    
+    &:hover{
+        background-color: rgba(0, 0, 0, .8);
+    }
+    
+}
+
+
+
+
+.subscribe-form{
+    
+    margin: 0 10px;
+    
+    background-color: #01d4f3;
+    
+    border-radius: 10px;
+    
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        align-items: center;
+    }
+}
+
+.subscribe-form__body{
+    padding: 10px 23px 20px 26px;
+}
+
+.subscribe-form__subtitle{
+    font-size: 28px;
+    color: #fff;
+    
+    margin: 0 0 20px 0;
+}
+
+.email{
+    font-size: 16px;
+    color: #4f4f4f;
+    
+    width: 265px;
+    height: 26px;
+    background-color: #e8e8e8;
+    
+    padding: 2px 0 3px 10px;
+    
+}
+
+.subscribe-btn{
+    width: 111px;
+    height: 30px;
+    background-color: #029bb1;
+    
+    font-size: 16px;
+    color: #fff;
+    
+    cursor: pointer;
+    
+    transition: background-color .2s linear;
+    
+    &:hover{
+        background-color: rgba(0, 0, 0, .5);
+    }
+}
+
+@media screen and(max-device-width: 986px){
+    
+    .login-form{
+        margin-bottom: 4%;
+    }
+    
+    .contact__row{
+        justify-content: center;
+    }
+}
+
+@media screen and(max-device-width: 487px){
+    
+    .submit-btn{
+        margin: 2% 0 0;
+    }
+    
+    .text{
+        flex: 0 0 100%;
+        
+        &:nth-child(2){
+            margin: 2% 0 0;
+        }
+    }
+}
+
+@media screen and(max-device-width: 444px){
+    
+    .subscribe-btn{
+        margin: 2% 0 0;
+    }
+    
+    .email{
+        width: 100%;
+    }
+}
+

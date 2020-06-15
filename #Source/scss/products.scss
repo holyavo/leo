@@ -1,0 +1,211 @@
+.products{
+    padding: 5.48% 0 5.938%;
+}
+
+.products__container{
+    width: 100%;
+    max-width: 1022px;
+    
+    margin: 0 auto;
+    
+    padding: 0 2.657%;
+}
+
+.tabs-links__container{
+    display: flex;
+    
+    justify-content: space-between;
+    
+}
+
+.tab{
+    margin: 0 20px;
+}
+
+.tabs-links{
+    //margin: 0 0 10.483%;
+}
+
+.tab__body{
+    text-align: center;
+    
+}
+
+.tab__link{
+    img{
+        margin: 0 0 15px;
+    }
+    p{
+        color: rgba(0, 0, 0, .45);
+        font-size: 27px;
+        font-family: "SegoeWPN";
+        transition: color .2s linear;
+    
+        
+        span{
+            font-size: 23px;
+        }
+    }
+    
+    &:hover{
+        //убирает эффект hover
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-user-select: none;
+        -webkit-touch-callout: none /*only to disable context menu on long press*/
+        p{
+            color: #000;
+        }
+    }
+}
+
+.ipad-img{
+    position: relative;
+    
+    margin: 0 auto 4.745%;
+    
+    width: 100%;
+    max-width: 770px;
+    
+}
+
+.device-img{
+    position: relative;
+    max-width: 100%;
+}
+
+.screen-img{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    
+    max-width: 100%;
+    padding: 0 14%;
+}
+
+.tabs-info__block{
+    
+    display: none;
+    
+    padding: 0 6.922%;
+    
+    h2{
+        font-size: 38px;
+        font-family: 'SegoeWPN';
+        color: #4F4F4F;
+        
+        margin: 0 0 23px;
+        
+    }
+    
+    p{
+        font-family: 'UniversCE';
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #818181;
+        
+        &:first-of-type{
+            margin: 0 0 20px;
+        }
+    }
+    
+}
+
+.tabs-info__block--active{
+    display: block;
+    
+    .screen-img{
+         animation: .9s ease-in-out 0s 1 normal forwards screens;
+    }
+    
+    .device-img{
+        animation: .9s ease-in-out 0s 1 normal forwards device;
+    }
+    
+}
+
+.tab__link--active{
+    p{
+        color: #000;
+    }
+}
+
+@keyframes screens{
+    0%{
+        top: 0;
+    }
+    
+    100%{
+        top: 12%;
+    }
+}
+
+@keyframes device{
+    0%{
+        top: 50px;
+    }
+    
+    100%{
+        top: 0;
+    }
+}
+
+
+@media screen and(max-device-width: 980px){
+    
+    .tabs-links__container{
+        
+        flex-direction: column;
+        
+    }
+    
+    .tab{
+        border: 2px solid rgba(0, 0, 0, .5);
+        
+        margin: 1% 0;
+        
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .tab__link{
+        padding: 1% 0 1% 1%;
+    
+        display: flex;
+        
+        img{
+            flex: 0 1 auto;
+            margin: 0 4% 0 2%;
+            
+            width: calc(30px + 40 * (100vw / 1280));
+        }
+        
+        p{
+            align-self: center;
+            
+            font-size: calc(13px + 14 * (100vw / 1280));
+            
+            span{
+                font-size: calc(13px + 14  * (100vw / 1280));
+            }
+            
+        }
+        
+        &--active{
+                background-color: rgb(232, 225, 208, .5);
+        }
+
+    }
+    
+    .tabs-info__block{
+        margin: 0 0 3%;
+        h2{
+            font-size:  calc(26px + 12  * (100vw / 1280));
+        }
+    }
+    
+    .screen-img{
+        padding: 0 15%;
+    }
+    
+}

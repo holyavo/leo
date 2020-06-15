@@ -1,0 +1,88 @@
+.portfolio{
+    padding: 1.719% 0 4.376%;
+}
+
+.portfolio__container{
+    
+    width: 100%;
+    max-width: 1022px;
+    
+    margin: 0 auto;
+}
+
+.portfolio__row{
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.portfolio__screenshot{
+    
+    flex: 0 0 50%;
+    padding: 0 19px;
+    
+    img{
+        width: 100%;
+    
+    }
+}
+
+.portfolio__body{
+    flex: 0 0 50%;
+    
+    padding: 3% 1.9% 0;
+}
+
+.portfolio__title{
+    
+    margin: 0 0 24px;
+    h2{
+        font-family: 'SegoeWPN';
+        font-size: 33px;
+        letter-spacing: 1.5px;
+        color: #4f4f4f;
+    }
+}
+
+.portfolio__list{
+    font-family: 'UniversCE';
+    font-size: 16px;
+    line-height: 30px;
+    color: #8a8888;
+    
+    ul{
+        
+        li{
+            background: url('/leo/img/Shape%2015%20copy%205.svg') 0 6px no-repeat;
+            padding: 0 0 0 40px;
+        }
+    }
+}
+
+@media screen and(max-device-width: 775px){
+
+    .portfolio__row{
+        justify-content: center;
+    }
+    .portfolio__screenshot{
+        flex: 0 0 100%;
+        padding: 0;
+        
+    }
+    
+    .portfolio__body{
+        flex: 0 0 100%;
+        
+        display: flex;
+        
+        flex-direction: column;
+        
+        align-items: center;
+        
+    }
+    
+    .portfolio__list{
+        margin: 0 auto;
+    }
+}
+

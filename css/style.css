@@ -1,0 +1,857 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.bigred {
+  font-size: 20px;
+  color: red;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "Bahnschrift";
+}
+
+.header {
+  padding: 35px 0 40px;
+  background: url("/leo/img/bg_top.png") 0 0/cover no-repeat;
+}
+
+.header__navigation {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: calc(68px + 50 * (100vw / 1280));
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0 20px;
+  font-family: "MrsEaves";
+  font-style: italic;
+}
+
+.list {
+  margin: 20px 0 0;
+}
+.list ul {
+  display: flex;
+}
+.list ul li {
+  margin: 0 20px;
+}
+.list ul li a {
+  font-size: 23px;
+  color: #fff;
+  font-weight: 300;
+  font-family: "SegoeWPN";
+  transition: color 0.2s linear;
+}
+.list ul li a:hover {
+  color: #12B367;
+}
+
+.header-slider {
+  width: 100%;
+  position: relative;
+  padding: 4.27% 0 0;
+  font-family: "SegoeWPN";
+}
+
+.header-slider__viewport {
+  margin: 0 21%;
+  max-width: 720px;
+  overflow: hidden;
+}
+
+.header-slider__container {
+  width: 300%;
+  display: flex;
+  transition: 0.8s ease-in-out;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.block__img {
+  flex: 0 0 50%;
+  padding: 0 3.5%;
+  display: flex;
+}
+.block__img img {
+  width: 100%;
+  max-width: 320px;
+  align-self: center;
+}
+
+.block__body {
+  flex: 0 1 50%;
+  padding: 7% 3.5% 5%;
+}
+
+.block__text {
+  width: 100%;
+  margin: 0 0 10% 0;
+}
+.block__text p {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 600;
+}
+.block__text span {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.block__btn a {
+  display: block;
+  width: 140px;
+  height: 40px;
+  background-color: #12B367;
+  text-align: center;
+  padding: 5px 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  color: #fff;
+  font-size: 23px;
+  transition: transform 0.2s linear;
+}
+.block__btn a:hover {
+  transform: translateY(3px);
+}
+
+.slider__btn {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.next {
+  transition: transform 0.2s linear;
+  cursor: pointer;
+}
+.next:hover {
+  transform: scale(1.1);
+}
+
+.previouse {
+  transform: scale(-1);
+  transition: transform 0.2s linear;
+  cursor: pointer;
+}
+.previouse:hover {
+  transform: scale(-1.1);
+}
+
+@media screen and (max-device-width: 795px) {
+  .menu-burger {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    z-index: 3;
+    margin: auto 25px auto 0;
+  }
+
+  .menu-burger span {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    top: 14px;
+    left: 0;
+    bottom: 9px;
+  }
+
+  .menu-burger:before,
+.menu-burger:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu-burger:before {
+    top: 0;
+  }
+
+  .menu-burger:after {
+    bottom: 0;
+  }
+
+  .menu-burger.active:before {
+    transform: rotate(45deg);
+    top: 13px;
+  }
+
+  .menu-burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 14px;
+  }
+
+  .menu-burger.active span {
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.87);
+    padding: 150px 0px 0px 0px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+
+  .list {
+    display: block;
+  }
+  .list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .list ul li {
+    margin: 0 0 40px;
+  }
+  .list ul li a {
+    font-size: 20px;
+  }
+
+  body.lock {
+    overflow: hidden;
+  }
+}
+.products {
+  padding: 5.48% 0 5.938%;
+}
+
+.products__container {
+  width: 100%;
+  max-width: 1022px;
+  margin: 0 auto;
+  padding: 0 2.657%;
+}
+
+.tabs-links__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  margin: 0 20px;
+}
+
+.tab__body {
+  text-align: center;
+}
+
+.tab__link img {
+  margin: 0 0 15px;
+}
+.tab__link p {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 27px;
+  font-family: "SegoeWPN";
+  transition: color 0.2s linear;
+}
+.tab__link p span {
+  font-size: 23px;
+}
+.tab__link:hover {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none p;
+  -webkit-touch-callout-color: #000;
+}
+
+.ipad-img {
+  position: relative;
+  margin: 0 auto 4.745%;
+  width: 100%;
+  max-width: 770px;
+}
+
+.device-img {
+  position: relative;
+  max-width: 100%;
+}
+
+.screen-img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  max-width: 100%;
+  padding: 0 14%;
+}
+
+.tabs-info__block {
+  display: none;
+  padding: 0 6.922%;
+}
+.tabs-info__block h2 {
+  font-size: 38px;
+  font-family: "SegoeWPN";
+  color: #4F4F4F;
+  margin: 0 0 23px;
+}
+.tabs-info__block p {
+  font-family: "UniversCE";
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #818181;
+}
+.tabs-info__block p:first-of-type {
+  margin: 0 0 20px;
+}
+
+.tabs-info__block--active {
+  display: block;
+}
+.tabs-info__block--active .screen-img {
+  animation: 0.9s ease-in-out 0s 1 normal forwards screens;
+}
+.tabs-info__block--active .device-img {
+  animation: 0.9s ease-in-out 0s 1 normal forwards device;
+}
+
+.tab__link--active p {
+  color: #000;
+}
+
+@keyframes screens {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 12%;
+  }
+}
+@keyframes device {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@media screen and (max-device-width: 980px) {
+  .tabs-links__container {
+    flex-direction: column;
+  }
+
+  .tab {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    margin: 1% 0;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .tab__link {
+    padding: 1% 0 1% 1%;
+    display: flex;
+  }
+  .tab__link img {
+    flex: 0 1 auto;
+    margin: 0 4% 0 2%;
+    width: calc(30px + 40 * (100vw / 1280));
+  }
+  .tab__link p {
+    align-self: center;
+    font-size: calc(13px + 14 * (100vw / 1280));
+  }
+  .tab__link p span {
+    font-size: calc(13px + 14 * (100vw / 1280));
+  }
+  .tab__link--active {
+    background-color: rgba(232, 225, 208, 0.5);
+  }
+
+  .tabs-info__block {
+    margin: 0 0 3%;
+  }
+  .tabs-info__block h2 {
+    font-size: calc(26px + 12 * (100vw / 1280));
+  }
+
+  .screen-img {
+    padding: 0 15%;
+  }
+}
+.portfolio {
+  padding: 1.719% 0 4.376%;
+}
+
+.portfolio__container {
+  width: 100%;
+  max-width: 1022px;
+  margin: 0 auto;
+}
+
+.portfolio__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio__screenshot {
+  flex: 0 0 50%;
+  padding: 0 19px;
+}
+.portfolio__screenshot img {
+  width: 100%;
+}
+
+.portfolio__body {
+  flex: 0 0 50%;
+  padding: 3% 1.9% 0;
+}
+
+.portfolio__title {
+  margin: 0 0 24px;
+}
+.portfolio__title h2 {
+  font-family: "SegoeWPN";
+  font-size: 33px;
+  letter-spacing: 1.5px;
+  color: #4f4f4f;
+}
+
+.portfolio__list {
+  font-family: "UniversCE";
+  font-size: 16px;
+  line-height: 30px;
+  color: #8a8888;
+}
+.portfolio__list ul li {
+  background: url("/leo/img/Shape%2015%20copy%205.svg") 0 6px no-repeat;
+  padding: 0 0 0 40px;
+}
+
+@media screen and (max-device-width: 775px) {
+  .portfolio__row {
+    justify-content: center;
+  }
+
+  .portfolio__screenshot {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .portfolio__body {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio__list {
+    margin: 0 auto;
+  }
+}
+.contact {
+  font-family: "SegoeWPN";
+  padding: 24px 0 35px;
+}
+
+.contact__container {
+  width: 100%;
+  max-width: 1022px;
+  margin: 0 auto;
+}
+
+.contact__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.login-form {
+  background-color: #e67624;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.login-form form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.login-form__body {
+  padding: 10px 23px 20px 26px;
+}
+
+.login-form__subtitle {
+  font-size: 28px;
+  color: #fff;
+  margin: 0 0 20px 0;
+}
+
+.text {
+  font-size: 16px;
+  color: #4f4f4f;
+  width: 150px;
+  height: 26px;
+  background-color: #e8e8e8;
+  padding: 2px 0 3px 10px;
+}
+.text:nth-child(2) {
+  margin: 0 12px;
+}
+
+.submit-btn {
+  width: 94px;
+  height: 30px;
+  background-color: #444444;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 0 0 2px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.submit-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.subscribe-form {
+  margin: 0 10px;
+  background-color: #01d4f3;
+  border-radius: 10px;
+}
+.subscribe-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-form__body {
+  padding: 10px 23px 20px 26px;
+}
+
+.subscribe-form__subtitle {
+  font-size: 28px;
+  color: #fff;
+  margin: 0 0 20px 0;
+}
+
+.email {
+  font-size: 16px;
+  color: #4f4f4f;
+  width: 265px;
+  height: 26px;
+  background-color: #e8e8e8;
+  padding: 2px 0 3px 10px;
+}
+
+.subscribe-btn {
+  width: 111px;
+  height: 30px;
+  background-color: #029bb1;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.subscribe-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-device-width: 986px) {
+  .login-form {
+    margin-bottom: 4%;
+  }
+
+  .contact__row {
+    justify-content: center;
+  }
+}
+@media screen and (max-device-width: 487px) {
+  .submit-btn {
+    margin: 2% 0 0;
+  }
+
+  .text {
+    flex: 0 0 100%;
+  }
+  .text:nth-child(2) {
+    margin: 2% 0 0;
+  }
+}
+@media screen and (max-device-width: 444px) {
+  .subscribe-btn {
+    margin: 2% 0 0;
+  }
+
+  .email {
+    width: 100%;
+  }
+}
+.footer {
+  padding: 30px 0 43px;
+  background: url("/leo/img/bg__footer.png") 0 0/cover no-repeat;
+  font-family: "SegoeWPN";
+}
+
+.footer__container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__title {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto 20px;
+  width: 102px;
+}
+.footer__title--left {
+  margin: 0 16px 20px;
+}
+
+.navigation {
+  flex: 0 0 30%;
+  padding: 0 0 0 150px;
+}
+
+.navigation__menu {
+  font-family: "ArialMT";
+  font-size: 13px;
+  line-height: 22px;
+  width: 102px;
+  margin: 0 auto;
+}
+.navigation__menu ul li a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s linear;
+}
+.navigation__menu ul li a:hover {
+  color: white;
+}
+
+.testimonials {
+  flex: 0 0 350px;
+  padding: 0 3%;
+}
+
+.testimonials__container {
+  width: 290px;
+}
+
+.testimonials__text {
+  padding: 0 10px;
+  max-width: 291px;
+}
+.testimonials__text p:nth-of-type(1) {
+  font-family: "ArialMT";
+  font-size: 13px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 10px;
+}
+.testimonials__text p:nth-of-type(2) {
+  font-family: "ArialMT";
+  font-size: 13px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+.testimonials__text p:nth-of-type(3) {
+  font-family: "ArialMT";
+  font-size: 13px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.copyright {
+  flex: 0 0 35%;
+  padding: 0 4.5%;
+  font-family: "ArialMT";
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.copyright .logo {
+  margin: 0 0 20px;
+}
+
+.footer-slider {
+  width: 100%;
+  position: relative;
+}
+
+.footer-slider__viewport {
+  width: 100%;
+  height: 167px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-slider__container {
+  width: 500%;
+  display: flex;
+  position: absolute;
+  transition: 0.8s ease-in-out;
+}
+
+.footer-slider__btns {
+  position: absolute;
+  top: -37px;
+  right: 69px;
+}
+.footer-slider__btns img {
+  cursor: pointer;
+  margin: 0 2px;
+  border-radius: 8px;
+  transition: background-color 0.2S linear;
+}
+.footer-slider__btns img:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer__logo {
+  font-size: 118px !important;
+}
+
+@media screen and (max-device-width: 1000px) {
+  .footer__row {
+    justify-content: center;
+  }
+
+  .footer-slider__btns {
+    display: none;
+  }
+
+  .footer__title--left {
+    margin: 0 auto 20px;
+  }
+
+  .navigation {
+    padding: 0;
+    flex: 0 0 50%;
+    margin: 0 0 40px;
+  }
+
+  .testimonials {
+    flex: 0 0 50%;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+/*SegoeWPN*/
+@font-face {
+  font-family: "SegoeWPN";
+  src: url("../fonts/SegoeWPN/Segoe WP N.eot");
+  src: local("☺"), url("../fonts/SegoeWPN/Segoe WP N.woff") format("woff"), url("../fonts/SegoeWPN/Segoe WP N.ttf") format("truetype"), url("../fonts/SegoeWPN/Segoe WP N.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Bahnschrift*/
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("../fonts/Bahnschrift/Bahnschrift.eot");
+  src: local("☺"), url("../fonts/Bahnschrift/Bahnschrift.woff") format("woff"), url("../fonts/Bahnschrift/Bahnschrift.ttf") format("truetype"), url("../fonts/Bahnschrift/Bahnschrift.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
