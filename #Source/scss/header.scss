@@ -116,8 +116,6 @@
         font-size: 64px;
         font-weight: 600;
         
-        
-        
     }
     
     span{
@@ -280,6 +278,42 @@
         overflow: hidden;
     }
 }
+
+@media screen and(max-device-width: 1280px){
     
+    .slider__btn{
+        
+        img{
+            width: calc(30px + 20 * (100vw / 1280));;
+        }
+    }
+    
+    .block__text{
+        p{
+            font-size: calc(2px + 58 * (100vw / 1280));
+            
+            span {
+                font-size:  calc(0px + 39 * (100vw / 1280));
+            }
+        }
+    }
+    
+    .block__btn{
+        
+        a{
+            width: calc(40px + 100 * (100vw / 1280));
+            height: calc(12px + 28 * (100vw / 1280));
+            font-size: calc(5px + 18 * (100vw / 1280));
+        }
+
+    }
+    
+}
+
+@media screen and(max-device-width: 520px){
+    header-slider__viewport{
+        width: 302px;
+    }
+}
 
 
