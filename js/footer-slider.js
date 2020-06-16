@@ -4,7 +4,7 @@ var translateWidth = 0;
 var slideInterval = 4000;
 
 function nextSlideFooter() {
-    if(slideNow == slideCount){
+    if(slideNow == slideCount-1){
         slideNow = 0;   
     }
     translateWidth = -$('.footer-slider__viewport').width() * (slideNow);
@@ -29,7 +29,7 @@ $(document).ready(function () {
 function prevSlideFooter() {
     
     if (slideNow == 1) {
-        slideNow = slideCount +  1; 
+        slideNow = slideCount; 
     }
     translateWidth = -$('.footer-slider__viewport').width() * (slideNow - 2);
     $('.footer-slider__container').css({
