@@ -810,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-slider__container {
-  width: 500%;
+  width: 400%;
   display: flex;
   position: absolute;
   transition: 0.8s ease-in-out;
