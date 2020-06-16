@@ -62,7 +62,7 @@
 
 .header-slider__viewport{
    
-    margin: 0 21%;
+    margin: 0 1%;
     max-width: 720px;
     overflow: hidden;
 }
@@ -290,10 +290,10 @@
     
     .block__text{
         p{
-            font-size: calc(2px + 58 * (100vw / 1280));
+            font-size: calc(16px + 44 * (100vw / 1280));
             
             span {
-                font-size:  calc(0px + 39 * (100vw / 1280));
+                font-size:  calc(9px + 31 * (100vw / 1280));
             }
         }
     }
@@ -301,9 +301,9 @@
     .block__btn{
         
         a{
-            width: calc(40px + 100 * (100vw / 1280));
-            height: calc(12px + 28 * (100vw / 1280));
-            font-size: calc(5px + 18 * (100vw / 1280));
+            width: calc(70px + 70 * (100vw / 1280));
+            height: calc(20px + 20 * (100vw / 1280));
+            font-size: calc(11px + 12 * (100vw / 1280));
         }
 
     }
