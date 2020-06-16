@@ -3,6 +3,8 @@
 	<head>
 		<title>Leo</title>
 		<link rel="stylesheet" href="css/style.css" />
+		  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+          <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 	</head>
@@ -56,12 +58,30 @@
                                             <div class="block__btn"><a href="#">Try Demo</a></div>
                                         </div>
                                     </div>
+                                                                        <div class="block">
+                                        <div class="block__img"><img src="/leo/img/icon.png" alt=""></div>
+                                        <div class="block__body">
+                                            <div class="block__text">
+                                                <p>Introducing<br><span>Something hot.......</span></p>
+                                            </div>
+                                            <div class="block__btn"><a href="#">Try Demo</a></div>
+                                        </div>
+                                    </div>
+                                                                        <div class="block">
+                                        <div class="block__img"><img src="/leo/img/icon.png" alt=""></div>
+                                        <div class="block__body">
+                                            <div class="block__text">
+                                                <p>Introducing<br><span>Something hot.......</span></p>
+                                            </div>
+                                            <div class="block__btn"><a href="#">Try Demo</a></div>
+                                        </div>
+                                    </div>
                                 </div>
                            </div>
-                            <div class="slider__btn">
+                        <!--    <div class="slider__btn">
                                <img class="previouse"src="/leo/img/next.svg" alt="">
                                <img class="next"src="/leo/img/next.svg" alt="">
-                            </div>
+                            </div> -->
                        </div>
                     </div>
             </header>
@@ -273,6 +293,17 @@
         <script src="js/scroll.js"></script>
         <script src="js/burger.js"></script>
         <script src="js/toggle.js"></script>
+        
+          <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.header-slider__container').slick({
+         dots: true
+      });
+    });
+  </script>
 	</body>
 </html>
 

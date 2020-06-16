@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
-    $('#responsive').addClass('tabs-info__block--active');
-    $('a[href="#responsive"]').addClass('tab__link--active');
+    //$('#responsive').addClass('tabs-info__block--active');
+    //$('a[href="#responsive"]').addClass('tab__link--active');
    
     $('.tab__link').click(function (event) {
        var link = $(this).attr('href');
